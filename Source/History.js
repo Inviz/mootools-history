@@ -31,10 +31,10 @@ this.History = new new Class({
 
 	initialize: hasPushState ? function(){
 		events[event] = 2;
-		window.addEvent(event, this.bound('pop'));
+		window.addEvent(event, this.pop.bind(this));
 	} : function(){
 		events[event] = 1;
-		window.addEvent(event, this.bound('pop'));
+		window.addEvent(event, this.pop.bind(this));
 
 		this.hash = location.hash;
 		var hashchange = ('onhashchange' in window);
