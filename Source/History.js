@@ -9,7 +9,7 @@ authors: Christoph Pojer (@cpojer)
 
 license: MIT-style license.
 
-requires: [Core/Events, Core/Element.Event, Class-Extras/Class.Binds]
+requires: [Core/Events, Core/Element.Event]
 
 provides: History
 
@@ -27,7 +27,7 @@ var events = Element.NativeEvents,
 
 this.History = new new Class({
 
-	Implements: [Class.Binds, Events],
+	Implements: [Events],
 
 	initialize: hasPushState ? function(){
 		events[event] = 2;
